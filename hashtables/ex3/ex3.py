@@ -23,6 +23,7 @@ def intersection(arrays):
             if each_num not in cache:
                 #if the value is not yet in cache, set it to 1
                 cache[each_num] = 1
+           
             #otherwise, its already in cache, so increment the counter
             else:
                 cache[each_num] += 1

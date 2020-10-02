@@ -30,7 +30,8 @@ def reconstruct_trip(tickets, length):
     for ticket in tickets:
         airport_codes[ticket.source] = ticket.destination
 
-    #no matter what input is given, the first key is going to be NONE, which with be assigned to the next pair's value DESTINATION, so initialize the first airport code as None
+    #no matter what input is given, the first key is going to be NONE, which with be assigned to the next pair's value DESTINATION, 
+    # so initialize the first airport code as None
     start_airport_code = airport_codes["NONE"] #the first key in the cache of airport_codes
 
     #for each key in the range of the cache, the index will start at the start_airport_code (none) then will be re-assigned to the value of the next element's value, the loop will run and keep re-assigning the source to the destination
