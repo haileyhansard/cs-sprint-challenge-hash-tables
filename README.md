@@ -23,11 +23,28 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+    - a function where the input is data (usually a string) and the output is a number. Must be deterministic (consistent). Every time it receives the same input, it must return the same output.
+    - different input data must return different numbers to avoid collisions
+    - must return numbers that are within a specific range (limit)
+    - the hash function: hashes each key's input data into a number, then we use mod % to get the range of the length of the table (how many slots). returns value % len(table), and that is going to be the index of that key (the position in the hash table).
 2. Collision resolution
+    - when collisions happen (same output integers occur for different inputs), we need to move the keys around so that the new keys can fit into the array, hash table.
+    - we can use chaining: allows each slot to hold a reference to a collection of items. In every slot, there will be a Linked List. Add to the head of the list. Then the others make room and move down.
 3. Performance of basic hash table operations
+    - provide key/value storage with O(1) time, constant time
+    - in Python, hash tables are known as dictionaries
+    - insertion (put), deletion (delete), and search (get) are basic operations
 4. Load factor
+    - the # of items stored in hash table / total # of slots. In other words, the occupied slots divided by the length of the array.
+    - we want to maintain a low load factor to avoid collisions.
 5. Automatic resizing
+    - when load factor gets too high (usually 0.7 or 70% full) then we want to resize the hash table. 
+    - Usually double the size of hash table, making room for more data.
+    - If load factor is too low (usually 0.2), you can downsize to save memory, but this isnt usually too big of a worry.
 6. Various use cases for hash tables
+    - hash tables allow us to access key-value pairs quickly. they store values under a specific key.
+    - quickly lookup every person in a certain department in a big list of data. You could use the hash table to find the department and print the names of everyone in that department.
+
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
